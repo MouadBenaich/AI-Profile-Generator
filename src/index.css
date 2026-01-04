@@ -1,0 +1,264 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap');
+/* Elevate Tachyons-based cards without changing JSX */
+.tc .ma2.shadow-5 {
+  /* Card container */
+  background: linear-gradient(180deg, #121826 0%, #0E1523 100%);
+  border: 1px solid rgba(229, 231, 235, 0.14);
+  border-radius: 16px !important;      /* soften edges */
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, filter 150ms ease;
+  overflow: hidden;
+}
+
+.tc .ma2.shadow-5:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  border-color: rgba(212,175,55,0.45); /* subtle gold accent */
+  filter: brightness(1.03);
+}
+
+/* Inner padding and visual rhythm */
+.tc .ma2.shadow-5.pa3 {
+  padding: 0 !important; /* we’ll control padding per sections for a cleaner look */
+}
+
+/* Media area (image) */
+.tc .ma2.shadow-5 img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.06) saturate(1.06);
+}
+
+/* Subtle overlay for prestige feel */
+.tc .ma2.shadow-5 .img-overlay {
+  position: relative;
+}
+.tc .ma2.shadow-5 .img-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.35) 60%, rgba(15,23,42,0.55) 100%);
+  pointer-events: none;
+}
+
+/* Content block */
+.tc .ma2.shadow-5 .content {
+  padding: 14px 14px 16px;
+  text-align: left; /* gives a premium editorial feel; switch to center if you prefer */
+}
+
+/* Name (h2) and email (p) typical in ZTM Card */
+.tc .ma2.shadow-5 h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 10px 0 6px;
+  color: #E5E7EB;
+  letter-spacing: 0.2px;
+}
+
+.tc .ma2.shadow-5 p {
+  margin: 0 0 6px;
+  font-size: 13.5px;
+  color: #9CA3AF;
+}
+
+/* Optional divider accent */
+.tc .ma2.shadow-5 .divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,0.5), rgba(212,175,55,0));
+  margin: 10px 14px;
+}
+
+/* Grid for the list without changing CardList markup
+   - Targets direct children inside the container that typically holds the cards */
+.tc > *:has(.shadow-5), /* modern browsers */
+.tc .cards-grid-fallback {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Fallback: if :has() isn’t supported, add a wrapper class to CardList container "cards-grid-fallback" */
+
+:root {
+  --bg: #0F172A;        /* deep navy */
+  --bg-2: #0B1220;      /* darker navy */
+  --panel: #111827;     /* near-black surface */
+  --text: #E5E7EB;      /* soft light gray */
+  --muted: #9CA3AF;     /* cool gray */
+  --accent: #D4AF37;    /* subtle gold */
+  --primary: #2563EB;   /* refined blue */
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --shadow-sm: 0 6px 16px rgba(0,0,0,0.25);
+  --shadow-md: 0 12px 28px rgba(0,0,0,0.35);
+  --shadow-lg: 0 18px 40px rgba(0,0,0,0.45);
+  --ring: 0 0 0 3px rgba(37, 99, 235, 0.35);
+}
+
+/* Base reset */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  color: var(--text);
+  background:
+    radial-gradient(1100px 700px at 20% 15%, #121a33 0%, #0E1523 60%, #0A1220 100%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+
+/* App container */
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+
+/* Header */
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+  letter-spacing: 0.3px;
+  margin: 0 0 18px;
+  color: var(--text);
+  background: linear-gradient(180deg, #e8eaee 0%, #cfd3da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* gradient text */
+  text-shadow: 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* Panel (wraps search or info blocks if needed) */
+.panel {
+  background: linear-gradient(180deg, #141a2a 0%, #101826 100%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 18px;
+}
+
+/* Search box styling (applies to input in SearchBox) */
+input[type="search"],
+input[type="text"] {
+  width: min(640px, 90%);
+  margin: 8px auto 24px;
+  display: block;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(229,231,235,0.25);
+  background: linear-gradient(180deg, #1a2234 0%, #131a2a 100%);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+
+input[type="search"]::placeholder,
+input[type="text"]::placeholder { color: var(--muted); }
+
+input[type="search"]:hover,
+input[type="text"]:hover {
+  border-color: rgba(212,175,55,0.45);
+}
+
+input[type="search"]:focus,
+input[type="text"]:focus {
+  box-shadow: var(--ring), var(--shadow-sm);
+  border-color: rgba(37,99,235,0.55);
+  transform: translateY(-1px);
+}
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+/* Card */
+.card {
+  background: linear-gradient(180deg, #121826 0%, #0E1523 100%);
+  border: 1px solid rgba(229,231,235,0.14);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, filter 150ms ease;
+  backdrop-filter: saturate(1.02);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(212,175,55,0.45);
+  filter: brightness(1.03);
+}
+
+/* Card media */
+.card-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #0B1220;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: contrast(1.06) saturate(1.06);
+}
+
+/* Subtle media overlay for prestige feel */
+.card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.35) 60%, rgba(15,23,42,0.55) 100%);
+  pointer-events: none;
+}
+
+/* Card content */
+.card-content {
+  padding: 14px 14px 16px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 6px;
+  color: var(--text);
+}
+
+.card-sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Utility: gold accent divider (optional) */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,0.5), rgba(212,175,55,0));
+  margin: 16px auto;
+  width: min(680px, 90%);
+}
+
+/* Respect Tachyons: increase specificity so our styles win */
+.tc { text-align: center; }
+
