@@ -111,6 +111,9 @@ h1, h2, h3, p, span, label, .pitch, .skills-title, .card-title, .card-sub {
   border: 1px solid rgba(255,138,42,0.26);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-1);
+  position: sticky; 
+  top: 0; 
+  z-index: 100;
 }
 
 /* Search input (centered, neon orange focus) */
@@ -162,6 +165,60 @@ input:focus {
   text-align: center;      /* center all text */
   width: 100%;
 }
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;               /* thickness of scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--panel);  /* matches your panel background */
+  border-radius: var(--radius-lg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--neon-orange) 0%, var(--neon-orange-2) 100%);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--panel); /* spacing effect */
+  box-shadow: 0 0 12px rgba(255,138,42,0.35); /* neon glow */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--neon-orange-3) 0%, var(--neon-orange) 100%);
+}
+
+/* Secondary scrollbar (inside Scroll component) */
+.scroll-container {
+  overflow-y: auto;
+  height: 500px; /* or whatever height you set */
+}
+
+/* Scoped scrollbar styling */
+.scroll-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: var(--panel);
+  border-radius: var(--radius-lg);
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--neon-orange) 0%, var(--neon-orange-2) 100%);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--panel);
+  box-shadow: 0 0 12px rgba(255,138,42,0.35);
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--neon-orange-3) 0%, var(--neon-orange) 100%);
+}
+
+/* Firefox support */
+.scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neon-orange) var(--panel);
+}
+
 
 /* Section title */
 .profile-generator .skills-title {
