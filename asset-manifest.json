@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AI-Profile-Generator/static/css/main.b616a1d4.css",
+    "main.js": "/AI-Profile-Generator/static/js/main.81deba80.js",
+    "static/js/453.bf8560bd.chunk.js": "/AI-Profile-Generator/static/js/453.bf8560bd.chunk.js",
+    "index.html": "/AI-Profile-Generator/index.html",
+    "main.b616a1d4.css.map": "/AI-Profile-Generator/static/css/main.b616a1d4.css.map",
+    "main.81deba80.js.map": "/AI-Profile-Generator/static/js/main.81deba80.js.map",
+    "453.bf8560bd.chunk.js.map": "/AI-Profile-Generator/static/js/453.bf8560bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b616a1d4.css",
+    "static/js/main.81deba80.js"
+  ]
+}
