@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# ⚡ AI Profile Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive, AI‑powered profile generator built with **React.js**, designed to showcase dynamic rendering, responsive UI/UX, and modern deployment workflows. This project demonstrates my ability to combine **technical mastery** with **design psychology** to create applications that are both functional and visually engaging.
 
-## Available Scripts
+🔗 **Live Demo:** [AI Profile Generator](https://mouadbenaich.github.io/AI-Profile-Generator/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
+- **React.js Fundamentals**
+  - Functional components & props
+  - State management & dynamic rendering
+  - API integration & async flows
+  - Error handling & debugging
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **UI/UX Excellence**
+  - Neon‑inspired design system with custom CSS variables
+  - Sticky search panel for intuitive filtering
+  - Responsive grid layout using CSS Grid & Flexbox
+  - Custom scrollbar styling aligned with brand aesthetics
+  - Tachyons utility classes for rapid prototyping
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Interactivity**
+  - Real‑time search filtering of profiles
+  - Scrollable card list with isolated overflow
+  - Randomized robot avatars for unique profile generation
+  - Hover effects, shadows, and transitions for psychological impact
 
-### `npm test`
+- **Deployment Workflow**
+  - GitHub Pages deployment
+  - Vercel integration for production builds
+  - Clean commit history with descriptive messages
+  - Error‑free build process (`npm run build`)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧠 Key Technical Highlights
+- Migrated project to **React 18** using `createRoot`
+- Implemented reusable components (`Card`, `CardList`, `SearchBox`, `Scroll`)
+- Scoped CSS for **secondary scrollbar** to match neon theme
+- Debugged API fetch errors (`response.json()` fix)
+- Documented progress with daily logs and exercise tables
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Project Structure
+src/
+├── components/
+│    ├── Card.js
+│    ├── CardList.js
+│    ├── SearchBox.js
+│    └── Scroll.js
+├── App.js
+├── index.js
+└── App.css
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tech Stack
+- **Frontend:** React.js, JSX, CSS3, Tachyons
+- **Deployment:** GitHub Pages, Vercel
+- **Version Control:** Git + GitHub
+- **Design:** Custom CSS variables, gradients, shadows, responsive layouts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📈 Learning Journey
+This project is part of my **Zero to Mastery Web Developer 2026** course.  
+Daily progress is tracked in my [Exercises Page](./exercises.html) and [Progress Log](./README.md), highlighting:
+- Service Worker setup
+- ReportWebVitals integration
+- Component rendering
+- Styling with Tachyons
+- Search & scroll functionality
+- API debugging
+- Neon scrollbar design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎯 Why This Project Matters
+The **AI Profile Generator** is more than a coding exercise — it’s a showcase of:
+- My ability to **debug and adapt quickly**  
+- My focus on **psychological design impact**  
+- My commitment to **clean documentation and recruiter‑friendly presentation**  
+- My skill in **deploying polished projects** that stand out
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📬 Contact
+👨‍💻 **Mouad Benaich**  
+📍 Based in Morocco, open to global collaboration  
+🔗 [GitHub Profile](https://github.com/MouadBenaich)  
+🔗 [Portfolio](https://mouadbenaich.github.io/MY-WEBSITE-ZTM/) 
